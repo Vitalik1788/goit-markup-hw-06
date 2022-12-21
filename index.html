@@ -381,7 +381,7 @@
                 <b class="subscription-heading">Subscribe</b>
                 <div class="footer-field">
                     <label class="footer-label" for="Subscribe"></label>                   
-                    <input class="footer-input" type="email" name="Subscribe" placeholder="E-mail">
+                    <input class="footer-input" type="email" name="Subscribe" placeholder="E-mail" required>
                     <button class="footer-button" type="submit">Subscribe</button>               
                 </div>                   
             </form>
@@ -392,29 +392,51 @@
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <b class="modal-heading">Leave your contacts and we will call you back</b>
-            <div class="backdrop-form">    
+            <form class="backdrop-form">    
                 <label class="label" for="name">
                     Name
-                    <input class="input" type="text" name="name">
+                    <div class="input-icon">
+                        <input class="input" type="text" name="name" required>
+                        <svg class="icon-modal" width="18px" height="18px">
+                            <use href="./images/icons.svg#icon-name"></use>
+                        </svg>                          
+                    </div>                    
                 </label>    
                 <label class="label" for="tel">
                     Phone
-                    <input class="input" type="tel" name="tel">
+                    <div class="input-icon">
+                        <input class="input" type="tel" name="tel" required>
+                        <svg class="icon-modal" width="18px" height="24px">
+                            <use href="./images/icons.svg#icon-phone"></use>
+                        </svg>
+                    </div>                    
                 </label>    
                 <label class="label" for="email">
                     Email
-                    <input class="input" type="email" name="email">
+                    <div class="input-icon">
+                        <input class="input" type="email" name="email" required>
+                        <svg class="icon-modal" width="18px" height="24px">
+                            <use href="./images/icons.svg#icon-envelope"></use>
+                        </svg>   
+                    </div>
+                    
                 </label>    
                 <label class="label" for="Comment">
                     Comment
                     <textarea class="comment-text" name="Comment" placeholder="Text input"></textarea>
                 </label>   
-                <label class="checkbox" for="Privacy policy">
-                    <input class="input-checkbox" type="checkbox" name="Privacy policy">
-                    I accept the terms and conditions of the Privacy Policy                    
-                </label>
+
+                <div class="checkbox">                    
+                    <input class="input-checkbox" type="checkbox" id="privacy-policy" name="privacy-policy">
+                    <span class="craft-checkbox"></span>
+                    <label class="checkbox-label" for="privacy-policy">I accept the terms and conditions of the Privacy Policy</label>
+                </div>
+                
+                
+                    
+                
                 <button class="send-btn" type="submit">Send</button> 
-            </div> 
+            </form> 
 
             <button data-modal-close class="modal-btn" type="button">
             <svg width="8px" height="8px">
