@@ -567,6 +567,8 @@ padding-bottom: 100px;
     
     padding-top: 72px;
     padding-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
     width: 408px;
     height: 576px;
     background-color: #FCFCFC;
@@ -602,9 +604,6 @@ padding-bottom: 100px;
     display: flex;
     flex-direction: column;
     
-    padding-left: 24px;
-    padding-right: 24px;
-
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
@@ -662,46 +661,37 @@ padding-bottom: 100px;
     outline: none;
 }
 
+/* Checkbox modal */
 
-.checkbox {
-    display: flex;
-    align-items: center;
-    padding-left: 24px;
-    margin-top: 16px;
-}
-
-
-
-.checkbox-label {
-    margin-left: 8px;
+.label-checkbox {
     font-size: 12px;
     line-height: 1.33;
     letter-spacing: 0.04em;
     color: #757575;
 }
 
-.input-checkbox {
-    appearance: none;
-}
-
-.input-checkbox:checked + .craft-checkbox 
-{background-image: url(../images/checkbox/Vectorcheckeed.svg);
-background-repeat: no-repeat;
-background-size: contain; 
-background-color: #404BBF;
-
-}
-
-.craft-checkbox {
-    
+.icon-checkbox {
+    display: inline-block;
     width: 16px;
     height: 16px;
     border: 1.25px solid #2E2F42;
     border-radius: 2px;
-    
 }
 
+.checkbox:checked + .icon-checkbox {
+background: #404BBF;
+background-image: url(../images/checkbox/Vectorcheckeed.svg);
+border: 1.25px solid #404BBF;
+border-radius: 2px;
+background-size: contain;
+background-repeat: no-repeat;
+}
 
+.checkbox {
+    appearance: none;
+}
+
+/* / Checkbox modal */
 
 
 .send-btn {
